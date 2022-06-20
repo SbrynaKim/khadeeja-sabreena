@@ -1,0 +1,9 @@
+
+Ticket Details
+
+Ticket Number: 8
+Ticket Price: 20
+Ticket Type: Adult
+Ticket Time: 10:00
+Ticket Block: Middle Block
+________
