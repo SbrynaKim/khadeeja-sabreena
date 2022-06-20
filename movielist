@@ -1,0 +1,105 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Window;
+
+import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+
+public class movielist extends JFrame {
+
+	JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					movielist frame = new movielist();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public movielist() {
+		setTitle("AURUM CINEMA movie list");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 460, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(248, 248, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblLabel = new JLabel("NOW SHOWING");
+		lblLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLabel.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblLabel.setBounds(121, 10, 217, 21);
+		contentPane.add(lblLabel);
+		
+		JButton btnbuynow1 = new JButton("Fantastic Beast");
+		btnbuynow1.setIcon(null);
+		btnbuynow1.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnbuynow1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				booking bk = new booking();
+				bk.setVisible(true);
+			}
+		});
+		btnbuynow1.setBounds(46, 180, 113, 46);
+		contentPane.add(btnbuynow1);
+		
+		JButton btnbuynow2 = new JButton("Turning Red");
+		btnbuynow2.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnbuynow2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				booking bk = new booking();
+				bk.setVisible(true);
+			}
+		});
+		btnbuynow2.setBounds(169, 180, 113, 46);
+		contentPane.add(btnbuynow2);
+		
+		JButton btnbuynow3 = new JButton("Army Of Thieves");
+		btnbuynow3.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnbuynow3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				booking bk = new booking();
+				bk.setVisible(true);
+			}
+		});
+		btnbuynow3.setBounds(292, 180, 113, 46);
+		contentPane.add(btnbuynow3);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\izzat\\Downloads\\Fantastic Beast resize.JPG"));
+		lblNewLabel.setBounds(62, 46, 97, 124);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\izzat\\Downloads\\Turning_Red_poster resize.JPG"));
+		lblNewLabel_1.setBounds(183, 46, 104, 124);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\izzat\\Downloads\\Army Of Thieves resize.JPG"));
+		lblNewLabel_2.setBounds(301, 46, 104, 124);
+		contentPane.add(lblNewLabel_2);
+	}
+}
